@@ -1,8 +1,6 @@
-// const DISPLAY = document.querySelector(".display");
-// const DIGIT7 = document.querySelector(".digit .seven");
-
-// function displayUpdate(x){
-//     DISPLAY.innerHTML = x;
-// }
-
-// DIGIT7.onclick = displayUpdate(7);
+const display = document.querySelector(".display");
+var num = " ";
+function displayUpdate(value){
+    num += value;
+    display.innerHTML = num;
+}

@@ -1,9 +1,6 @@
 .display{
-    font-size: 64pt;
+    font-size: 32pt;
     border: 1px solid black;
-    width: 25%;
-    text-align: center;
-    background-color: lightgrey;
 }
 .digit{
     font-size: 32pt;
