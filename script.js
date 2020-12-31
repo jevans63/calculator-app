@@ -3,13 +3,20 @@ const display = document.querySelector(".display");
 ////////////////////////////////////////////////////////////////
 var num = null;
 var submit = false;
+var decimal = false;
 var temp, oper, result;
 
 //
 function displayUpdate(value){
-    if(num == null)num = value;
-    else num += value;
+    if(value == "." && decimal){
+        num = "error";
+    } 
+    if(num == null) num = value;
+    else if(!submit) num += value;
     display.innerHTML = num;
+    if(value == "." && !decimal){
+        decimal = true;
+    } 
 }
 
 //
