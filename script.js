@@ -2,20 +2,32 @@ const display = document.querySelector(".display");
 var num = null;
 var temp;
 var oper;
+var result;
+
+//
 function displayUpdate(value){
-    if(num == null)
-    num = parseInt(value);
-    else num += parseInt(value);
+    if(num == null)num = value;
+    else num += value;
     display.innerHTML = num;
 }
+
+//
 function operator(value){
-    temp = parseInt(display.innerHTML);
-    if(value == '+') oper = value;
+    temp = parseFloat(display.innerHTML);
+    oper = value;
     num = null;
     display.innerHTML = oper;
 }
+
+//
 function equals(){
-    num =  parseInt(display.innerHTML);
-    if(oper == '+') num += temp;
-    display.innerHTML = num;
+    num = parseFloat(display.innerHTML); 
+    ////////////////////////////
+    if(oper == '+') result = temp + num;
+    if(oper == '-') result = temp - num;
+    if(oper == '*') result = temp * num;
+    if(oper == '/') result = temp / num;
+    ////////////////////////////
+    num = temp;
+    display.innerHTML = result;
 }
