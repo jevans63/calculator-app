@@ -1,3 +1,3 @@
 # calculator-app
 hello,
-this is a calculator web app
+this is a very minimal calculator app built with js
